@@ -4,7 +4,131 @@
     --pastel-orange-color: #e0795d;
     --golden-yellow-color: #f0ca8c;
     --pastel-blue-color: #6b9af6;
+    --white-color: #fff;
     --heading-text-color: #000000;
     --body-text-color: #3b3d50;
 }
 
+body {
+    font-size: 16px;
+    font-family: 'Antic', sans-serif;
+}
+
+/* Navbar Styles */
+.navbar {
+background-color: var(--pastel-green-color);
+font-family: 'Bubblegum Sans', sans-serif;
+}
+
+.button {
+    background-color: var(--pastel-green-color);
+    border: none;
+    font-family: 'Bubblegum Sans', sans-serif;
+}
+
+.button:hover {
+    background-color: #aeb9a4;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 2px;
+}
+
+header {
+    height: 950px;
+    min-height: 100%;
+    background-color: var(--pastel-green-color);
+    background-image:url(../imgs/logo.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.title-container {
+    margin-top: 780px;
+    background-color: var(--pastel-blue-color);
+    backdrop-filter: blur(5px);
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 8px 10px;
+    backdrop-filter: blur(1px);
+    padding: 15px;
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+    transition: all 0.3s ease 0s;
+}
+
+.title-container:hover {
+    background-color: var(--pastel-blue-color);
+    box-shadow: rgba(0, 0, 0, 0.5) 0 10px 12px;
+    transform:  translateY(-5px);
+}
+
+#button-main {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 100%;
+    font-size: 25px;
+    background: none;
+    text-decoration: none;
+}
+
+#button-main:hover {
+    background-color: var(--pastel-orange-color);
+    color: var(--white-color);
+}
+
+h1 {
+    font-size: 35px;
+    font-weight: 200;
+    color: var(--heading-text-color);
+}
+
+/* About Section Styles */
+#about-section {
+    background: var(--white-color);
+}
+
+#about-info-container {
+    margin: auto;
+    margin-left: 5%;
+}
+
+#about-info-img {
+    margin: auto;
+    padding-top: 5%;
+    padding-left: 10%;
+}
+
+/* Dog Filter Choices Section Styles */
+#dog-filter-section {
+    background-color: var(--pastel-orange-color);
+}
+
+/* Adoption Center Section Styles */
+#adoption-section {
+    background-color: var(--pastel-blue-color);
+}
+
+.adopt-card {
+    background-color: rgba(255, 255, 255, 0.5);
+    background-image: url(../imgs/placeholder.png);
+    box-shadow: rgba(0, 0, 0, 0.5) 0 5px 8px;
+    height: 400px;
+    margin: 10px;
+    transition: all 0.3s ease 0s;
+}
+
+.adopt-card:hover {
+    box-shadow: rgba(0, 0, 0, 0.5) 0 10px 12px;
+    transform:  translateY(-3px);
+}
+
+/* Contact Section Styles */
+#contact-section {
+    background-color: var(--golden-yellow-color);
+}
