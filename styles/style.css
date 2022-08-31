@@ -11,17 +11,19 @@
 
 body {
     font-size: 16px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Antic', sans-serif;
 }
 
 /* Navbar Styles */
 .navbar {
 background-color: var(--pastel-green-color);
+font-family: 'Bubblegum Sans', sans-serif;
 }
 
 .button {
     background-color: var(--pastel-green-color);
     border: none;
+    font-family: 'Bubblegum Sans', sans-serif;
 }
 
 .button:hover {
@@ -40,7 +42,7 @@ header {
 
 @keyframes slideInFromLeft {
     0% {
-        transform: translateX(-150%);
+        transform: translateX(-100%);
     }
     100% {
         transform: translateX(0);
@@ -55,7 +57,7 @@ header {
     box-shadow: rgba(0, 0, 0, 0.5) 0px 8px 10px;
     backdrop-filter: blur(1px);
     padding: 15px;
-    animation: 0.75s ease-in 0s 1 slideInFromLeft;
+    animation: 1s ease-out 0s 1 slideInFromLeft;
     transition: all 0.3s ease 0s;
 }
 
@@ -76,7 +78,7 @@ header {
 }
 
 #button-main:hover {
-    background-color: #7196df;
+    background-color: var(--pastel-orange-color);
     color: var(--white-color);
 }
 
@@ -88,5 +90,31 @@ h1 {
 
 /* About Section Styles */
 #about-section {
-    background: var(--pastel-orange-color);
+    background: var(--white-color);
+}
+
+#about-info-container {
+    margin: auto;
+    margin-left: 5%;
+}
+
+#about-info-img {
+    margin: auto;
+    padding-top: 5%;
+    padding-left: 10%;
+}
+
+/* Dog Filter Choices Section Styles */
+#dog-filter-section {
+    background-color: #e0795d;
+}
+
+/* Adoption Center Section Styles */
+#adoption-section {
+    background-color: var(--pastel-blue-color);
+}
+
+/* Contact Section Styles */
+#contact-section {
+    background-color: var(--golden-yellow-color);
 }
