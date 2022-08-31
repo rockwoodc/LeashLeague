@@ -106,12 +106,24 @@ h1 {
 
 /* Dog Filter Choices Section Styles */
 #dog-filter-section {
-    background-color: #e0795d;
+    background-color: var(--pastel-orange-color);
 }
 
 /* Adoption Center Section Styles */
 #adoption-section {
     background-color: var(--pastel-blue-color);
+}
+
+.adopt-card {
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: rgba(0, 0, 0, 0.5) 0 5px 8px;
+    margin: 5px;
+    transition: all 0.3s ease 0s;
+}
+
+.adopt-card:hover {
+    box-shadow: rgba(0, 0, 0, 0.5) 0 10px 12px;
+    transform:  translateY(-3px);
 }
 
 /* Contact Section Styles */
