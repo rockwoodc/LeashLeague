@@ -1,14 +1,27 @@
 html {
     min-height: 100%;
-    background-image: url(/imgs/leashleague.jpg);
+    background-image: url(../imgs/leashleague.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
 }
 
 .box {
-    width: 50%;
+    width: 40%;
+    height: 50%;
    background: transparent;
    box-shadow: none;
+   background-color: #e1ecd7;
+   margin: auto 30px;
+   padding: 10px;
    
+   opacity: .8;
+}
+
+.label {
+    color: #e0795d;
+}
+
+.button.is-primary {
+    background-color: #6b9af6;;
 }
