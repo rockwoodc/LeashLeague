@@ -1,0 +1,14 @@
+html {
+    min-height: 100%;
+    background-image: url(/imgs/leashleague.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.box {
+    width: 50%;
+   background: transparent;
+   box-shadow: none;
+   
+}
