@@ -1,4 +1,4 @@
-INSERT INTO small_dogs (name)
+INSERT INTO small_dogs (breed)
 VALUES 
 ('Beagle'),
 ('Boston Terrier'),
@@ -16,12 +16,12 @@ VALUES
 ('Finance'),
 ('Legal');
 
-INSERT INTO medium_dogs (name)
+INSERT INTO medium_dogs (breed)
 VALUES 
 ('Bulldog'),
 ('Basset Hound');
 
-INSERT INTO large_dogs (name)
+INSERT INTO large_dogs (breed)
 VALUES 
 ('Hound'),
 ('Australian Shepherd'),
@@ -36,7 +36,7 @@ VALUES
 ('Rottweiler'),
 ('Poodle');
 
-INSERT INTO calm_dogs (name)
+INSERT INTO calm_dogs (breed)
 VALUES 
 ('Bulldog'),
 ('Basset Hound'),
@@ -50,7 +50,7 @@ VALUES
 ('Labrador Retriever'),
 ('Yorkshire Terrier');
 
-INSERT INTO energetic_dogs (name)
+INSERT INTO energetic_dogs (breed)
 VALUES 
 ('Hound'),
 ('Australian Shepard'), 
@@ -67,34 +67,34 @@ VALUES
 ('Pitbull'), 
 ('Rottweiler');
 
-INSERT INTO hypoallergenic_dogs (name)
+INSERT INTO hypoallergenic_dogs (breed)
 VALUES 
 ('Poodle'),
 ('Bichon Frise'), 
-('Yorkshire Terrier'),
+('Yorkshire Terrier');
 
-INSERT INTO family_dogs (name)
+INSERT INTO family_dogs (breed)
 VALUES 
 ('Beagle'),
 ('Bichon Frise'),
-('Hound'), 
+('Hound'),
 ('Boston Terrier'),
-('Boxer'), 
-('Bulldog'), 
-('Corgi'), 
-('French Bulldog'), 
-('Golden Retriever'), 
-('Labrador Retriever'), 
-('Pug'), 
-('Husky'), 
-('Pitbull'), 
-('Poodle'), 
+('Boxer'),
+('Bulldog'),
+('Corgi'),
+('French Bulldog'),
+('Golden Retriever'),
+('Labrador Retriever'),
+('Pug'),
+('Husky'),
+('Pitbull'),
+('Poodle'),
 ('Rottweiler');
 
-INSERT INTO guard_dogs (name)
+INSERT INTO guard_dogs (breed)
 VALUES 
 ('Australian Shepard'),
-(' Boxer'), 
+('Boxer'), 
 ('Doberman Pinscher'), 
 ('German Shepherd'), 
 ('Rottweiler'), 

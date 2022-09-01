@@ -9,32 +9,32 @@ DROP TABLE IF EXISTS guard_dogs;
 
 CREATE TABLE small_dogs (
     breed VARCHAR(30) NOT NULL
-)
+);
 
 CREATE TABLE medium_dogs (
     breed VARCHAR(30) NOT NULL
-)
+);
 
 CREATE TABLE large_dogs (
     breed VARCHAR(30) NOT NULL
-)
+);
 
 CREATE TABLE calm_dogs (
     breed VARCHAR(30) NOT NULL
-)
+);
 
 CREATE TABLE energetic_dogs (
     breed VARCHAR(30) NOT NULL
-)
+);
 
 CREATE TABLE hypoallergenic_dogs (
     breed VARCHAR(30) NOT NULL
-)
+);
 
 CREATE TABLE family_dogs (
     breed VARCHAR(30) NOT NULL
-)
+);
 
 CREATE TABLE guard_dogs (
     breed VARCHAR(30) NOT NULL
-)
+);
