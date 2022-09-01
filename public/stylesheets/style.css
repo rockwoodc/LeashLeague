@@ -35,7 +35,7 @@ header {
     height: 950px;
     min-height: 100%;
     background-color: var(--pastel-green-color);
-    background-image:url(../imgs/logo.png);
+    background-image: url(../../imgs/logo.png);
     background-repeat: no-repeat;
     background-position: center center;
 }
@@ -109,6 +109,11 @@ h1 {
     background-color: var(--pastel-orange-color);
 }
 
+.check {
+    margin-top: 20px;
+    margin-left: 8%;
+}
+
 /* Adoption Center Section Styles */
 #adoption-section {
     background-color: var(--pastel-blue-color);
@@ -116,7 +121,7 @@ h1 {
 
 .adopt-card {
     background-color: rgba(255, 255, 255, 0.5);
-    background-image: url(../imgs/placeholder.png);
+    background-image: url(../../imgs/placeholder.png);
     box-shadow: rgba(0, 0, 0, 0.5) 0 5px 8px;
     height: 400px;
     margin: 10px;
