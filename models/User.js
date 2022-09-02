@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
+const sequelize = require('../config/loginconnection');
 const saltRounds = 12;
-const Sequelize = require('sequelize');
 
 // Generates User Model
 class User extends Model {
@@ -19,6 +19,10 @@ User.init(
             allowNull: false,
             autoIncrement: true,
             primaryKey: true
+        },
+        username: {
+            type: DataTypes.STRING,
+            allowNull: false
         },
         email: {
             type: DataTypes.STRING,
@@ -48,7 +52,7 @@ User.init(
                 return encryptedPW;
             }
         },
-        Sequelize,
+        sequelize,
         underscored: true,
         timestamps: false,
         modelName: 'user',

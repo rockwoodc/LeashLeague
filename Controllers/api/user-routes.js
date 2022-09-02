@@ -1,13 +1,15 @@
 const router = require('express').Router();
-const { resolveAny } = require('dns');
 const { User } = require('../../models');
+// var User = require('../../models/User')(sequelize, DataTypes);
 
 // GET Users
 router.get('/', (req, res) => {
-    User.findAll()
-        .then(dbUserTable => res.json(dbUserTable))
+    User.findAll({
+        attributes: { exclude: ['password'] }
+    })
+        .then(dbUserData => res.json(dbUserData))
         .catch(err => {
-            console.error(err);
+            console.log(err);
             res.status(500).json(err);
         });
 });
@@ -35,6 +37,7 @@ router.get('/:id', (req, res) => {
 // POST Users
 router.post('/', (req, res) => {
     User.create({
+        username: req.body.username,
         email: req.body.email,
         password: req.body.password
     })
@@ -96,17 +99,17 @@ router.put('/:id', (req, res) => {
             id: req.params.id
         }
     })
-    .then(dbUserTable => {
-        if (!dbUserTable) {
-            res.status(404).json({ message: 'User Not Registered with this ID'});
-            return;
-        }
-        res.json(dbUserTable);
-    })
-    .catch(err => {
-        console.error(err);
-        res.status(500).json(err);
-    });
+        .then(dbUserTable => {
+            if (!dbUserTable) {
+                res.status(404).json({ message: 'User Not Registered with this ID' });
+                return;
+            }
+            res.json(dbUserTable);
+        })
+        .catch(err => {
+            console.error(err);
+            res.status(500).json(err);
+        });
 });
 
 // DELTE Users by ID
@@ -116,17 +119,17 @@ router.delete('/:id', (req, res) => {
             id: req.params.id
         }
     })
-    .then(dbUserTable => {
-        if (!dbUserTable) {
-            res.status(404).json({ message: 'User Not Registered to this ID' });
-            return;
-        }
-        res.json(dbUserTable);
-    })
-    .catch(err => {
-        console.error(err);
-        res.status(500).json(err);
-    })
+        .then(dbUserTable => {
+            if (!dbUserTable) {
+                res.status(404).json({ message: 'User Not Registered to this ID' });
+                return;
+            }
+            res.json(dbUserTable);
+        })
+        .catch(err => {
+            console.error(err);
+            res.status(500).json(err);
+        })
 });
 
 module.exports = router;
