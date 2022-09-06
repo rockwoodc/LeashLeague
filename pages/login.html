@@ -6,30 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Login</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" href="../styles/login.css">
+    <link rel="stylesheet" href="../public/stylesheets\login.css">
     </head>
   <body>
-    <div class="logo">
-      <img src="../imgs/leash-leage-logo.png" alt="leash-league-logo">
-    </div>
-    <form class="box">
+    <!-- card container -->
+    <div class="card">
+      <div class="card-content login">
+      <p class="title">
+      <img src="../imgs/logo-lateral.png">
+      </p>
+      <p class="subtitle">
+      Sign in to continue.
+      </p>
+      <!-- Sign in information -->
       <div class="field">
-        <label class="label">Email</label>
-        <div class="control">
-          <input class="input" type="email" placeholder="e.g. alex@example.com">
-        </div>
+      <label class="label">Email</label>
+      <div class="control">
+      <input class="input" type="text" placeholder="Email address">
       </div>
-    
+      </div>
       <div class="field">
-        <label class="label">Password</label>
-        <div class="control">
-          <input class="input" type="password" placeholder="********">
-        </div>
+      <label class="label">Password</label>
+      <div class="control">
+      <input class="input" type="email" placeholder="My password">
       </div>
-    
-      <button class="button is-primary" href="../pages/index.html">Sign in</button>
-    </form>
-  </section>
-    </div>
+      </div>
+      <h6 class="subtitle is-6 has-text-centered">or</h6>
+      <!--Register Button-->
+      </div>
+      <footer class="card-footer">
+      <p class="card-footer-item register">
+      <span>
+      Register
+      </span>
+      </p>
+      </footer>
+     </div>
+
   </body>
 </html>

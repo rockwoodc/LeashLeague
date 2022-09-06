@@ -1,27 +1,63 @@
 html {
     min-height: 100%;
-    background-image: url(../imgs/leashleague.jpg);
+    background-image: url(../../imgs/leashleague.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    overflow: hidden;
+    
 }
 
-.box {
-    width: 40%;
-    height: 50%;
-   background: transparent;
-   box-shadow: none;
+.button {
+    border-radius: 0;
+    border: none;
+   }
+   .card-content.login {
    background-color: #e1ecd7;
-   margin: auto 30px;
-   padding: 10px;
-   
-   opacity: .8;
-}
-
-.label {
-    color: #e0795d;
-}
-
-.button.is-primary {
+    border: none;
+    
+    
+   }
+   .card-footer-item.register {
     background-color: #6b9af6;;
+    color: white;
+   }
+   .input{
+   border-width:1px;
+    border-radius:15px;
+   }
+   .card-footer {
+   border: none;
+   }
+   .label {
+    font-weight:bold;
+    color: #e0795d;
+   }
+
+   p.subtitle {
+    text-align: center;
+   }
+
+   .card {
+    width: 25%;
+    height: 25%;
+    margin: 6rem; 
+   }
+
+ 
+body {
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
+  
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+
+ 
