@@ -1,6 +1,5 @@
 const router = require('express').Router();
 const { User } = require('../../models');
-// var User = require('../../models/User')(sequelize, DataTypes);
 
 // GET Users
 router.get('/', (req, res) => {
@@ -80,7 +79,7 @@ router.post('/login', (req, res) => {
                 res.json({ user: dbUserTable, message: 'You have successfully logged in!' });
             });
         });
-})
+});
 
 // Log User Out (204 Status Message is a positive request status but requires no navigation away from the current page)
 router.post('/logout', (req, res) => {
