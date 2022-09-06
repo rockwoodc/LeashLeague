@@ -86,9 +86,9 @@ router.post('/logout', (req, res) => {
     if (req.session.LOGIN) {
         req.session.destroy(() => {
             res.status(204).end();
-        })
-    }
-})
+        });
+    };
+});
 
 // PUT Users by ID
 router.put('/:id', (req, res) => {
