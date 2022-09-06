@@ -11,6 +11,10 @@ html {
 .button {
     border-radius: 0;
     border: none;
+    background-color: #6b9af6;
+    color: white;
+   
+    
    }
    .card-content.login {
    background-color: #e1ecd7;
