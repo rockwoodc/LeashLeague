@@ -13,24 +13,30 @@ router.get('/', (req, res) => {
         });
 });
 
+// // GET Users by ID
+// router.get('/:id', (req, res) => {
+//     User.findOne({
+//         where: {
+//             id: req.params.id
+//         }
+//     })
+//         .then(dbUserTable => {
+//             if (!dbUserTable) {
+//                 res.status(404).json({ alert: 'No User associated with that ID' });
+//                 return;
+//             }
+//             res.json(dbUserTable);
+//         })
+//         .catch(err => {
+//             console.error(err);
+//             res.status(500).json(err);
+//         });
+// });
+
 // GET Users by ID
-router.get('/:id', (req, res) => {
-    User.findOne({
-        where: {
-            id: req.params.id
-        }
-    })
-        .then(dbUserTable => {
-            if (!dbUserTable) {
-                res.status(404).json({ alert: 'No User associated with that ID' });
-                return;
-            }
-            res.json(dbUserTable);
-        })
-        .catch(err => {
-            console.error(err);
-            res.status(500).json(err);
-        });
+router.get('/login', (req, res) => {
+    console.log('FINALLY RUNNING');
+    res.render('login')
 });
 
 // POST Users
@@ -56,6 +62,9 @@ router.post('/', (req, res) => {
 
 // Verify User Login with their Email and Password
 router.post('/login', (req, res) => {
+    console.log('Got my Email and Password');
+    console.log(req.body.email);
+    console.log(req.body.password);
     // Need a Valid Email with a Password longer than 8 characters
     User.findOne({
         where: {
