@@ -17,8 +17,24 @@
 </head>
 
 <body>
+    <!-- Header Title -->
+    <header>
+        <div class="columns is-centered">
+            <div class="column is-5">
+                <div class="title-container">
+                    <div id="button-main-container" class="buttons">
+                        <a id="button-main" class="button has-text-centered">
+                            FIND YOUR PAWFECT FRIEND!
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
     <!-- Navigation Header Bar -->
     <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+        {{#if loggedIn}}
         <div class="navbar-brand">
             <a class="navbar-item" href="https://bulma.io">
                 <img src="../imgs/logo-words.png" width="200" height="75">
@@ -59,13 +75,14 @@
                         </a>
                     </div>
                 </div>
+                {{else}}
                 <div class="navbar-item">
                     <div class="buttons">
-                        <a class="button">
+                        <a href="../login.handlebars" class="button">
                             Login
                         </a>
                         <a class="button">
-                            Profile
+                            Logout
                         </a>
                     </div>
                 </div>
@@ -73,22 +90,8 @@
         </div>
         </div>
         </div>
+        {{/if}}
     </nav>
-
-    <!-- Header Title -->
-    <header>
-        <div class="columns is-centered">
-            <div class="column is-5">
-                <div class="title-container">
-                    <div id="button-main-container" class="buttons">
-                        <a id="button-main" class="button has-text-centered">
-                            FIND YOUR PAWFECT FRIEND!
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
 
     <!-- About Section -->
     <section id="about-section" class="section is-medium">
@@ -116,53 +119,62 @@
     <!-- Dog Filter Choices Section -->
     <section id="dog-filter-section" class="section is-medium">
         <h1 class="title has-text-centered">Find Your Breed!</h1>
-        <div class="columns">
-            <div class="column check">
-                <label class="checkbox">
-                    <input type="checkbox"> Small
-                </label>
-            </div>
-            <div class="column check">
-                <label class="checkbox">
-                    <input type="checkbox"> Medium
-                </label>
-            </div>
-            <div class="column check">
-                <label class="checkbox">
-                    <input type="checkbox"> Large
-                </label>
-            </div>
-            <div class="column check">
-                <label class="checkbox">
-                    <input type="checkbox"> Calm
-                </label>
-            </div>
-        </div>
-        <div class="columns">
-            <div class="column check">
-                <label class="checkbox">
-                    <input type="checkbox"> Energetic
-                </label>
-            </div>
-            <div class="column check">
-                <label class="checkbox">
-                    <input type="checkbox"> Hypoallergenic
-                </label>
-            </div>
-            <div class="column check">
-                <label class="checkbox">
-                    <input type="checkbox"> Family
-                </label>
-            </div>
-            <div class="column check">
-                <label class="checkbox">
-                    <input type="checkbox"> Guard Dog
-                </label>
-            </div>
-        </div>
-        <div class="tile-container">
+        <div class="container">
+
             
-        </div>
+                <select id="dog-dropdown">
+                    <option value="Australian_Shepherd">Australian Shepherd</option>
+
+                    <option value="Basset_Hound">Basset Hound</option>
+
+                    <option value="Beagle">Beagle</option>
+
+                    <option value="Boxer">Boxer</option>
+                    
+                    <option value="American_Bulldog">Bulldog</option>
+                    
+                    <option value="Chow_Chow">Chow Chow</option>
+                    
+                    <option value="Pembroke_Welsh_Corgi">Corgi</option>
+                    
+                    <option value="Dachshund">Dachshund</option>
+
+                    <option value="Doberman_Pinscher">Doberman Pinscher</option>
+                    
+                    <option value="French_Bulldog">French Bulldog</option>
+
+                    <option value="German_Shepherd">German Shepherd</option>
+                    
+                    <option value="Golden_Retriever">Golden Retriever</option>
+
+                    <option value="Bloodhound">Bloodhound</option>
+                    
+                    <option value="Siberian_Husky">Husky</option>
+
+                    <option value="Labrador_Retriever">Labrador Retriever</option>
+                    
+                    <option value="American_Pit_bull_Terrier">Pitbull</option>
+
+                    <option value="Pomeranian">Pomeranian</option>
+
+                    <!--figure out how to isolate-->
+                    <option value="Poodle">Poodle (standard)</option>
+
+                    <option value="Poodle_(Miniature)">Poodle (Miniature)</option>
+
+                    <!--figure out how to isolate-->
+                    <option value="Pug">Pug</option>
+
+                    <option value="Rottweiler">Rottweiler</option>
+
+                    <option value="Shih_Tzu">Shih Tzu</option>
+
+                    <option value="Yorkshire_Terrier">Yorkshire Terrier</option>
+
+                </select>
+           
+            <button id="Explore">Explore</button>
+           
     </section>
 
     <!-- ADOPTION CENTER Section -->
@@ -204,14 +216,15 @@
     <!-- Footer Section -->
     <footer class="footer">
         <div class="content has-text-centered">
-          <p>
-            <a href=""><strong>Leash League</strong></a> by Christian Rockwood, James Fraser, Christopher Campaigne, Cortland Finch, and Simiaun.
-          </p>
+            <p>
+                <a href=""><strong>Leash League</strong></a> by Christian Rockwood, James Fraser, Christopher Campaigne,
+                Cortland Finch, and Simiaun.
+            </p>
         </div>
-      </footer>
+    </footer>
 
     <!-- Project Javascript File Link -->
-    <script defer src="../scripts/script.js"></script>
+    <script  src="../public/javascript/api.js"></script>
 </body>
 
 </html>
