@@ -4,7 +4,7 @@ html {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    overflow: hidden;
+    
     
 }
 
@@ -13,6 +13,8 @@ html {
     border: none;
     background-color: #6b9af6;
     color: white;
+    margin-top: 1rem;
+    
    
     
    }
@@ -25,6 +27,7 @@ html {
    .card-footer-item.register {
     background-color: #6b9af6;;
     color: white;
+    margin: auto;
    }
    .input{
    border-width:1px;
