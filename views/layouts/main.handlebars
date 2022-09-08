@@ -1,33 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/public/stylesheets/login.css">
-    <title>Leash League</title>
+    <!-- Bulma Framework Link -->
+    <link href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" rel="stylesheet">
+    <!-- Google Fonts Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Antic&family=Bubblegum+Sans&display=swap" rel="stylesheet">
+    <!-- Project Style Sheet Link -->
+    <link rel="stylesheet" href="../public/stylesheets/style.css">
+    <title>Leash League!</title>
 </head>
+
 <body>
-    <div class="wrapper">
+    <!-- Header Title -->
     <header>
-      <h1>
-        <a href="/">Leash League</a>
-      </h1>
-      <nav>
-        {{#if loggedIn}}
-        <a href="../dashboard.handlebars">Dashboard</a>
-        <button id="logout" class="btn-no-style">logout</button>
-        {{else}}
-        <a href="../login.handlebars">Login</a>
-        {{/if}}
-      </nav>
+        <div class="columns is-centered">
+            <div class="column is-5">
+                <div class="title-container">
+                    <div id="button-main-container" class="buttons">
+                        <a id="button-main" class="button has-text-centered">
+                            FIND YOUR PAWFECT FRIEND!
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
-    <main>
-      {{{ body }}}
-    </main>
-    <footer>
-      We have the Best Dog Site!
+
+    <!-- Navigation Header Bar -->
+    <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+        {{#if loggedIn}}
+        <div class="navbar-brand">
+            <a class="navbar-item" href="https://bulma.io">
+                <img src="../imgs/logo-words.png" width="200" height="75">
+            </a>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-end">
+                <a class="navbar-item">
+                    Home
+                </a>
+                <a class="navbar-item">
+                    About
+                </a>
+                <a class="navbar-item">
+                    Dogs
+                </a>
+
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        More
+                    </a>
+
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item">
+                            Kennels
+                        </a>
+                        <hr class="navbar-divider">
+                        <a class="navbar-item">
+                            Contact
+                        </a>
+                    </div>
+                </div>
+                {{else}}
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a href="../login.handlebars" class="button">
+                            Login
+                        </a>
+                        <a class="button">
+                            Logout
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+        {{/if}}
+    </nav>
+
+    <!-- About Section -->
+    <section id="about-section" class="section is-medium">
+        <h1 class="title has-text-centered">About Pupaholics</h1>
+        <div class="columns">
+            <div id="about-info-container" class="column">
+                <h2 class="subtitle">
+                    As devoted dog owners and lovers we wanted to make it simple for you to find your new fury
+                    bestfriend. As we
+                    all know dogs can come in all shapes and sizes with different tempermeants and physical activity
+                    needs. This
+                    often makes it difficult for new potential dog owners to choose which breed they want or can have
+                    depending
+                    on their situation at home. <br> We have created what we beleive is a great starting point in
+                    choosing your
+                    new companion.
+                </h2>
+            </div>
+            <div id="about-info-img" class="column">
+                <img src="../imgs/bone.png" alt="img of dog with bone">
+            </div>
+        </div>
+    </section>
+
+    <!-- Dog Filter Choices Section -->
+    <section id="dog-filter-section" class="section is-medium">
+        <h1 class="title has-text-centered">Find Your Breed!</h1>
+        <div class="columns is-centered">
+            <div class="column">
+                <div class="dropdown is-active">
+                    <div class="dropdown-trigger">
+                        <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+                            <span>Dropdown button</span>
+                            <span class="icon is-small">
+                                <i class="fas fa-angle-down" aria-hidden="true"></i>
+                            </span>
+                        </button>
+                    </div>
+                    <div class="dropdown-menu" id="dropdown-menu" role="menu">
+                        <div class="dropdown-content">
+                            <a href="#" class="dropdown-item">
+                                Dropdown item
+                            </a>
+                            <a class="dropdown-item">
+                                Other dropdown item
+                            </a>
+                            <a href="#" class="dropdown-item is-active">
+                                Active dropdown item
+                            </a>
+                            <a href="#" class="dropdown-item">
+                                Other dropdown item
+                            </a>
+                            <hr class="dropdown-divider">
+                            <a href="#" class="dropdown-item">
+                                With a divider
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ADOPTION CENTER Section -->
+    <section id="adoption-section" class="section is-medium">
+        <h1 class="title has-text-centered">Find AN ADOPTION CENTER Near You!</h1>
+        <div class="columns">
+            <div class="column adopt-card has-text-centered">
+                <h2>Richmond SPCA</h2>
+            </div>
+            <div class="column adopt-card has-text-centered">
+                <h2>Richmond Animal League</h2>
+            </div>
+            <div class="column adopt-card has-text-centered">
+                <h2>Richmond Ruff House</h2>
+            </div>
+        </div>
+        <div class="columns">
+            <div class="column adopt-card has-text-centered">
+                <h2>Friends United with the Richmond Shelter</h2>
+            </div>
+            <div class="column adopt-card has-text-centered">
+                <h2>Operation Paws For Homes</h2>
+            </div>
+            <div class="column adopt-card has-text-centered">
+                <h2>St. Francis Humane Association</h2>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact-section" class="section is-medium">
+        <h1 class="title has-text-centered">Contact Us!</h1>
+        <h2 class="subtitle">
+            A simple container to divide your page into <strong>sections</strong>, like the one you're currently
+            reading.
+        </h2>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>
+                <a href=""><strong>Leash League</strong></a> by Christian Rockwood, James Fraser, Christopher Campaigne,
+                Cortland Finch, and Simiaun.
+            </p>
+        </div>
     </footer>
-  </div>
+
+    <!-- Project Javascript File Link -->
+    <script defer src="../scripts/script.js"></script>
 </body>
+
 </html>
