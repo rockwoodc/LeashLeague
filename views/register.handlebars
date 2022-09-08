@@ -1,18 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Login</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" href="../public/stylesheets\login.css">
-    </head>
-  <body>
+    <form class="login-page">
     <!-- card container -->
-    <div class="columns is-centered">
-
-    
     <div class="card">
       <div class="card-content login">
       <p class="title">
@@ -22,35 +9,39 @@
       Sign in to continue.
       </p>
       <!-- Sign in information -->
+       <div class="field">
+        <label class="label">Username</label>
+        <div class="control">
+        <input class="input" type="text" placeholder="Usernam">
+        </div>
+      </div>
       <div class="field">
       <label class="label">Email</label>
       <div class="control">
-      <input class="input" type="text" placeholder="Email address">
+      <input class="input" id="email-signup" type="text" placeholder="Email address">
       </div>
       </div>
       <div class="field">
       <label class="label">Password</label>
       <div class="control">
-      <input class="input" type="email" placeholder="My password">
+      <input class="input" id="password-signup" type="password" placeholder="My password">
       </div>
       </div>
-      <div class="columns is-centered">
       <button class="button">Sign In</button>
-      </div>
       <h6 class="subtitle is-6 has-text-centered">or</h6>
-      
+      </form>
       <!--Register Button-->
       </div>
       <footer class="card-footer">
-      <p class="button card-footer-item register">
+      <p class="card-footer-item register">
       <span>
       Register
       </span>
       </p>
       </footer>
-    </div>
-  </div>
-</div>
-</body>
+     </div>
 
+  </body>
 </html>
+
+{{!-- <script src="/public/javascript/login.js"></script> --}}
