@@ -35,11 +35,7 @@ header {
     height: 950px;
     min-height: 100%;
     background-color: var(--pastel-green-color);
-<<<<<<< HEAD
-    background-image: url(../../imgs/logo.png);
-=======
     background-image:url(../../imgs/logo.png);
->>>>>>> 94a9891b5a028901dcb9641fd9f088ef13f72c7c
     background-repeat: no-repeat;
     background-position: center center;
 }
