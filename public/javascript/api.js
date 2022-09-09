@@ -19,12 +19,12 @@ function getDogBreeds(dogbreed){
     .then(res => res.json())
     .then(data => console.log(data))
     //display data
-
+    
     //if an error occurs
     .catch(error => console.error('Could not fetch your data'));
-    
+    console.log(dogbreed.bred_for)
 }
 
-document.getElementById('Explore').addEventListener('click', value)
 
+document.getElementById('Explore').addEventListener('click', value)
 //display api info on screen
