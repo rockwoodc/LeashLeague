@@ -134,11 +134,6 @@ h1 {
     transform:  translateY(-3px);
 }
 
-.adoption-img {
-    width: 300px;
-    height: 200px;
-}
-
 /* Contact Section Styles */
 #contact-section {
     background-color: var(--golden-yellow-color);
