@@ -1,14 +1,15 @@
 const router = require('express').Router();
 
-const apiRoutes = require('./api');
+const homeRouting = require('./home-routes')
+const apiRouting = require('./api');
+const mainpageRouting = require('./main-routes');
 
-router.use('/api', apiRoutes);
-router.get('/login', (req, res) => {
-  console.log('This is the LOGIN ROUTE');
-});
+router.use('/', homeRouting);
+router.use('/api', apiRouting);
+router.use('/main', mainpageRouting);
 
-router.use((req, res) => {
-  res.status(404).end();
-});
+// router.use((req, res) => {
+//   res.status(404).end();
+// });
 
 module.exports = router;
