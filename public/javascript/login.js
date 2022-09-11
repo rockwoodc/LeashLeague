@@ -28,7 +28,7 @@ async function registerPage() {
     const password = document.getElementById('#password-signup').value.trim();
 
     if (email && password) {
-        const loginfeedback = await fetch('/api/users/login', {
+        const loginFeedback = await fetch('/api/users/login', {
             method: 'post',
             body: {
                 username,
@@ -39,5 +39,7 @@ async function registerPage() {
     }
 }
 
+// OnClick Button navigates user to login page
 document.getElementById('login-form').onclick(loginPage);
+// OnClick Button navigates user to register page
 document.getElementById('register-form').onclick(registerPage);
