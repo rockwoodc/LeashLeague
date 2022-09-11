@@ -109,6 +109,12 @@ h1 {
     background-color: var(--pastel-orange-color);
 }
 
+.dog-img {
+    width: 700px;
+    height: 550px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0 5px 8px;
+}
+
 /* Adoption Center Section Styles */
 #adoption-section {
     background-color: var(--pastel-blue-color);
@@ -116,7 +122,7 @@ h1 {
 
 .adopt-card {
     background-color: rgba(255, 255, 255, 0.5);
-    background-image: url(../imgs/placeholder.png);
+    background-image: url(../../imgs/placeholder.png);
     box-shadow: rgba(0, 0, 0, 0.5) 0 5px 8px;
     height: 400px;
     margin: 10px;
