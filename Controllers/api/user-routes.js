@@ -6,37 +6,33 @@ router.get('/', (req, res) => {
     User.findAll({
         attributes: { exclude: ['password'] }
     })
-        .then(dbUserData => res.json(dbUserData))
+        .then(dbUserData => {
+            res.json(dbUserData)
+        })
         .catch(err => {
             console.log(err);
             res.status(500).json(err);
-        });
+        })
 });
 
-// // GET Users by ID
-// router.get('/:id', (req, res) => {
-//     User.findOne({
-//         where: {
-//             id: req.params.id
-//         }
-//     })
-//         .then(dbUserTable => {
-//             if (!dbUserTable) {
-//                 res.status(404).json({ alert: 'No User associated with that ID' });
-//                 return;
-//             }
-//             res.json(dbUserTable);
-//         })
-//         .catch(err => {
-//             console.error(err);
-//             res.status(500).json(err);
-//         });
-// });
-
 // GET Users by ID
-router.get('/login', (req, res) => {
-    console.log('FINALLY RUNNING');
-    res.render('login')
+router.get('/:id', (req, res) => {
+    User.findOne({
+        where: {
+            id: req.params.id
+        }
+    })
+        .then(dbUserTable => {
+            if (!dbUserTable) {
+                res.status(404).json({ alert: 'No User associated with that ID' });
+                return;
+            }
+            res.json(dbUserTable);
+        })
+        .catch(err => {
+            console.error(err);
+            res.status(500).json(err);
+        });
 });
 
 // POST Users
@@ -62,9 +58,6 @@ router.post('/', (req, res) => {
 
 // Verify User Login with their Email and Password
 router.post('/login', (req, res) => {
-    console.log('Got my Email and Password');
-    console.log(req.body.email);
-    console.log(req.body.password);
     // Need a Valid Email with a Password longer than 8 characters
     User.findOne({
         where: {
@@ -79,10 +72,11 @@ router.post('/login', (req, res) => {
             const properPW = dbUserTable.comparePassword(req.body.password);
             if (!properPW) {
                 res.status(400).json({ alert: 'IT ISNT HARD TO REMEMBER YOUR PASSWORD, TRY AGAIN GIRL.' })
-            }
-
+            } else {
+                console.log('==========');
+            };
             req.session.save(() => {
-                res.session.UserID = dbUserTable.id;
+                req.session.UserID = dbUserTable.id;
                 req.session.username = dbUserTable.username;
                 req.session.LOGIN = true;
                 res.json({ user: dbUserTable, message: 'You have successfully logged in!' });
