@@ -41,4 +41,8 @@ app.use(require('./Controllers/api/user-routes'));
 
 sequelize.sync({ force: false }).then(() => {
     app.listen(PORT, () => console.log('Big Brother is now Listening!'))
-})
+});
+
+// app.get('/', function (req, res) {
+//   res.render('login');
+// });

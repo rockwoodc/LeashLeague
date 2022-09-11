@@ -36,14 +36,20 @@ async function registerPage() {
     const password = document.getElementById('#password-signup').value.trim();
 
     if (email && password) {
-        const loginFeedback = await fetch('/api/users/login', {
+        const registerFeedback = await fetch('/api/users/login', {
             method: 'post',
             body: {
                 username,
                 email,
                 password
             },
-        })
+        });
+
+        if (registerFeedback.ok) {
+            document.location.replace('/main/');
+        } else {
+            console.error(error);
+        }
     }
 }
 
