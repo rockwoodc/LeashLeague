@@ -6,18 +6,13 @@ router.get('/', (req, res) => {
     User.findAll({
         attributes: { exclude: ['password'] }
     })
-        .then(dbUserData => res.json(dbUserData))
+        .then(dbUserData => {
+            res.json(dbUserData)
+        })
         .catch(err => {
             console.log(err);
             res.status(500).json(err);
         })
-        // .then
-        //     res.render('main', { loggedIn: true })
-
-        //   .catch(err => {
-        //     console.log(err);
-        //     res.status(500).json(err);
-        //   });
 });
 
 // GET Users by ID
@@ -77,10 +72,11 @@ router.post('/login', (req, res) => {
             const properPW = dbUserTable.comparePassword(req.body.password);
             if (!properPW) {
                 res.status(400).json({ alert: 'IT ISNT HARD TO REMEMBER YOUR PASSWORD, TRY AGAIN GIRL.' })
-            }
-
+            } else {
+                console.log('==========');
+            };
             req.session.save(() => {
-                res.session.UserID = dbUserTable.id;
+                req.session.UserID = dbUserTable.id;
                 req.session.username = dbUserTable.username;
                 req.session.LOGIN = true;
                 res.json({ user: dbUserTable, message: 'You have successfully logged in!' });
