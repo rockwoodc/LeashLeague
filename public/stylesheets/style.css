@@ -35,7 +35,7 @@ header {
     height: 950px;
     min-height: 100%;
     background-color: var(--pastel-green-color);
-    background-image:url(../../imgs/logo.png);
+    background-image:url(../imgs/logo.png);
     background-repeat: no-repeat;
     background-position: center center;
 }
@@ -132,6 +132,11 @@ h1 {
 .adopt-card:hover {
     box-shadow: rgba(0, 0, 0, 0.5) 0 10px 12px;
     transform:  translateY(-3px);
+}
+
+.adoption-img {
+    width: 300px;
+    height: 200px;
 }
 
 /* Contact Section Styles */
