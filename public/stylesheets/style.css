@@ -110,8 +110,9 @@ h1 {
 }
 
 .dog-img {
-    width: 700px;
-    height: 550px;
+    max-width: 50%;
+    /* width: 700px;
+    height: 550px; */
     box-shadow: rgba(0, 0, 0, 0.5) 0 5px 8px;
 }
 
@@ -120,8 +121,19 @@ h1 {
     background-color: var(--pastel-blue-color);
 }
 
-#adoption-section img {
+#adoption-section h1 {
+    font-family: 'Bubblegum Sans', sans-serif;
+}
+.adoption-img {
     max-width: 70%;
+}
+
+.adoption-img-racc {
+    max-width: 50%;
+}
+
+.adoption-img-sm {
+    max-width: 100%;
 }
 
 #adoption-section h3 {
@@ -145,4 +157,6 @@ h1 {
 /* Contact Section Styles */
 #contact-section {
     background-color: var(--golden-yellow-color);
+    text-align: center;
 }
+
