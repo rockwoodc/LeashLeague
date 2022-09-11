@@ -109,9 +109,10 @@ h1 {
     background-color: var(--pastel-orange-color);
 }
 
-.check {
-    margin-top: 20px;
-    margin-left: 8%;
+.dog-img {
+    width: 700px;
+    height: 550px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0 5px 8px;
 }
 
 /* Adoption Center Section Styles */
