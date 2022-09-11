@@ -1,3 +1,5 @@
+const { error } = require("console");
+
 // Async Login Form Function
 async function loginPage() {
     console.log("Hit Login Page!")
@@ -13,7 +15,13 @@ async function loginPage() {
                 email,
                 password
             },
-        })
+        });
+
+        if (loginfeedback.ok) {
+            document.location.replace('/main/')
+        } else {
+            console.error(error);
+        }
     }
 }
 

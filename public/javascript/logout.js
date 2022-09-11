@@ -1,3 +1,5 @@
+const { error } = require("console");
+
 async function logoutPage() {
     console.log("Hit Logout Page!")
     const logoutFeedback = await fetch('/api/users/logout', {
@@ -10,7 +12,7 @@ async function logoutPage() {
     if (logoutFeedback.ok) {
         document.location.replace('/');
     } else {
-
+        console.error(error);
     }
 }
 
