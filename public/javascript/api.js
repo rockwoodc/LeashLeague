@@ -19,10 +19,15 @@ function getDogBreeds(dogbreed){
     .then(res => res.json())
     .then(data => console.log(data))
     //display data
-    
+    const dogData = result.map((data) => ({
+
+        temperament: data.temperament,
+        image: data.reference_image.id,
+        
+    }));
     //if an error occurs
-    .catch(error => console.error('Could not fetch your data'));
-    console.log(dogbreed.bred_for)
+    // .catch(error => console.error('Could not fetch your data'));
+    // console.log(dogbreed.temperament)
 }
 
 
