@@ -2,18 +2,25 @@
 async function loginPage() {
     console.log("Hit Login Page!")
     // email link
-    const email = document.getElementById('#email-signup').value.trim();
+    const email = document.getElementById('email-signup').value;
     // password link
-    const password = document.getElementById('#password-signup').value.trim();
+    const password = document.getElementById('password-signup').value;
+    console.log(email, password);
 
     if (email && password) {
         const loginfeedback = await fetch('/api/users/login', {
-            method: 'post',
+            method: 'POST',
             body: {
                 email,
                 password
             },
-        })
+        });
+        console.log('LOGIN NEXT STEP')
+        if (loginfeedback.ok) {
+            document.location.replace('/dashboard')
+        } else {
+            console.error(error);
+        }
     }
 }
 
@@ -21,23 +28,31 @@ async function loginPage() {
 async function registerPage() {
     console.log("Hit Register Page!")
     // username link
-    const username = document.getElementById('#user-signup').value.trim();
+    const username = document.getElementById('user-register').value.trim();
     // email link
-    const email = document.getElementById('#email-signup').value.trim();
+    const email = document.getElementById('email-register').value.trim();
     // password link
-    const password = document.getElementById('#password-signup').value.trim();
+    const password = document.getElementById('password-register').value.trim();
 
     if (email && password) {
-        const loginfeedback = await fetch('/api/users/login', {
-            method: 'post',
+        const registerFeedback = await fetch('/api/users/login', {
+            method: 'POST',
             body: {
                 username,
                 email,
                 password
             },
-        })
+        });
+
+        if (registerFeedback.ok) {
+            document.location.replace('/main');
+        } else {
+            console.error(error);
+        }
     }
 }
 
-document.getElementById('login-form').onclick(loginPage);
-document.getElementById('register-form').onclick(registerPage);
+// OnClick Button navigates user to login page
+document.querySelector('.login-page').onsubmit = loginPage;
+// OnClick Button navigates user to register page
+// document.querySelector('.register-page').onsubmit = registerPage();

@@ -37,8 +37,12 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(require('./Controllers/api/user-routes'));
+app.use(require('./Controllers'));
 
 sequelize.sync({ force: false }).then(() => {
     app.listen(PORT, () => console.log('Big Brother is now Listening!'))
-})
+});
+
+// app.get('/', function (req, res) {
+//   res.render('login');
+// });
