@@ -109,6 +109,18 @@ h1 {
     background-color: var(--pastel-orange-color);
 }
 
+.breed-choice {
+    color:#e0795d;
+    font-weight: 600;
+    font-family: 'Antic', sans-serif;
+    font-size: larger;
+    text-align: center;
+    border-radius: 60px;
+    border-color: #aeb9a4;
+    border-width: 5px;
+    
+}
+
 .dog-img {
     max-width: 50%;
     /* width: 700px;
