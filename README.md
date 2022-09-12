@@ -163,13 +163,13 @@ If you have a suggestion that would make this better, please fork the repo and c
 <!-- CONTACT -->
 ## Contact
 
-Christopher Campaigne - email@gmail.com
+Christopher Campaigne - campaignemc@gmail.com
 
-James Fraser - email@gmail.com
+James Fraser - fraserjd16@gmail.com
 
-Cortland Finch - email@gmail.com
+Cortland Finch -  cortland.finch@gmail.com
 
-Christian Rockwood - email@gmail.com
+Christian Rockwood - rockwoodce@gmail.com
 
 
 
