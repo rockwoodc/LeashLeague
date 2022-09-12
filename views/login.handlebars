@@ -1,38 +1,42 @@
-<form class="login-page">
-    <!-- card container -->
-    <div class="card is-centered">
-      <div class="card-content login">
-        <p class="title">
-          <img src="/imgs/logo-lateral.png">
-        </p>
-        <p class="subtitle">
-          Sign in to continue.
-        </p>
-        <!-- Sign in information -->
-        <div class="field">
-          <label class="label">Email</label>
-          <div class="control">
-            <input class="input" id="email-signin" type="text" placeholder="Email address">
+<div class="columns is-centered">
+  <div class="column has-text-centered">
+    <form class="login-page">
+      <!-- card container -->
+      <div class="card is-centered">
+        <div class="card-content login">
+          <p class="title">
+            <img src="/imgs/logo-lateral.png">
+          </p>
+          <p class="subtitle">
+            Sign in to continue.
+          </p>
+          <!-- Sign in information -->
+          <div class="field">
+            <label class="label">Email</label>
+            <div class="control">
+              <input class="input" id="email-signin" type="text" placeholder="Email address">
+            </div>
           </div>
-        </div>
-        <div class="field">
-          <label class="label">Password</label>
-          <div class="control">
-            <input class="input" id="password-signin" type="password" placeholder="My password">
+          <div class="field">
+            <label class="label">Password</label>
+            <div class="control">
+              <input class="input" id="password-signin" type="password" placeholder="My password">
+            </div>
           </div>
-        </div>
-        <button type="submit">Sign In</button>
-        <h6 class="subtitle is-6 has-text-centered">or</h6>
-  </form>
-  <!--Register Button-->
+          <button class="button" type="submit"><a href="/dashboard">Sign In</a></button>
+          <h6 class="subtitle is-6 has-text-centered">or</h6>
+    </form>
+    <!--Register Button-->
   </div>
   <footer class="card-footer">
     <p class="card-footer-item register">
       <span><a href="/register">
-        Register
-      </a></span>
+          Register
+        </a></span>
     </p>
   </footer>
-  </div>
-  
-  <script src="/javascript/login.js"></script>
+</div>
+</div>
+</div>
+
+<script src="/javascript/login.js"></script>
