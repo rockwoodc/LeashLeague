@@ -84,7 +84,7 @@ router.post('/login', withAuth, (req, res) => {
                 res.json({ user: dbUserTable, message: 'You have successfully logged in!' });
             })
         });
-        res.render('login');
+        res.render('dashboard');
 });
 
 // Log User Out (204 Status Message is a positive request status but requires no navigation away from the current page)
