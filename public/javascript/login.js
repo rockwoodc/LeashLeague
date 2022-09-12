@@ -30,24 +30,25 @@ async function registerPage(event) {
     event.preventDefault();
     console.log("Hit Register Page!")
     // username link
-    const username = document.getElementById('user-register')
+    const username = document.querySelector('#user-register').value.trim();
     // email link
-    const email = document.getElementById('email-register')
+    const email = document.querySelector('#email-register').value.trim();
     // password link
-    const password = document.getElementById('password-register')
+    const password = document.querySelector('#password-register').value.trim();
 
-    if (email && password) {
-        const registerFeedback = await fetch('/api/users/login', {
+    if (username && email && password) {
+        const registerFeedback = await fetch('/api/users', {
             method: 'POST',
-            body: {
+            body: JSON.stringify({
                 username,
                 email,
                 password
-            },
+            }),
+            headers: {'Content-type': 'application/json'}
         });
 
         if (registerFeedback.ok) {
-            document.location.replace('dashboard');
+            document.location.replace('/dashboard/');
         } else {
             console.error(error);
         }
@@ -58,4 +59,4 @@ async function registerPage(event) {
 document.querySelector('.login-page').addEventListener('submit', loginPage);
 
 // OnClick Button navigates user to register page
-// document.querySelector('.register-page').addEventListener('submit', registerPage);
+document.querySelector('.register-page').addEventListener('submit', registerPage);
