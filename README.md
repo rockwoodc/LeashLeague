@@ -30,7 +30,7 @@
   <p align="center">
 We have created what we believe is a great starting point in choosing your new best friend. 
     <br />
-    You can see a hosted version of Leash League on <a href="https://Leash-League.contentful.com/" target="_blank">Heroku</a>.
+    You can see a hosted version of Leash League on <a href="https://Leash-League.contentful.com/" target="(https://warm-plateau-73527.herokuapp.com/)">Heroku</a>.
     <br />
     <a href="https://github.com/github_rockwoodc/LeashLeague"><strong>Explore the docs »</strong></a>
 </div>
