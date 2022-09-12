@@ -32,7 +32,7 @@ We have created what we believe is a great starting point in choosing your new b
     <br />
     You can see a hosted version of Leash League on <a href="https://warm-plateau-73527.herokuapp.com/" target="">Heroku</a>.
     <br />
-    <a href="https://github.com/github_rockwoodc/LeashLeague"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/rockwoodc/LeashLeague"><strong>Explore the docs »</strong></a>
 </div>
 
 
