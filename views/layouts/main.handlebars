@@ -23,7 +23,7 @@
             <div class="column is-5">
                 <div class="title-container">
                     <div id="button-main-container" class="buttons">
-                        <a id="button-main" class="button has-text-centered">
+                        <a id="button-main" class="button has-text-centered" href="login">
                             FIND YOUR PAWFECT FRIEND!
                         </a>
                     </div>
@@ -34,7 +34,7 @@
 
     <!-- Navigation Header Bar -->
     <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
-        {{#if loggedIn}}
+        {{#if LOGIN}}
         <div class="navbar-brand">
             <a class="navbar-item" href="https://bulma.io">
                 <img src="../imgs/logo-words.png" width="200" height="75">
@@ -78,10 +78,10 @@
                 {{else}}
                 <div class="navbar-item">
                     <div class="buttons">
-                        <a href="../login.handlebars" class="button">
+                        <a href="/login" class="button">
                             Login
                         </a>
-                        <a class="button">
+                        <a class="button" href="/login">
                             Logout
                         </a>
                     </div>
@@ -92,8 +92,6 @@
         </div>
         {{/if}}
     </nav>
-
-{{!-- {{{ body }}} --}}
 
     <!-- About Section -->
     <section id="about-section" class="section is-medium">
