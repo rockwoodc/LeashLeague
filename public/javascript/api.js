@@ -3,7 +3,6 @@ var apiKey = "&api_key=live_vqm057yKxYgjVnFyPLRJ1YAljtY8n1Qc6c4oUAF9Uv8UVnUTC4qK
 
 const select = document.querySelector('.breed-choice');
 const dogImgEl = document.querySelector('.dog-img');
-const dogInfoEl = document.querySelector('.dog-info');
 
 const getAllDogBreeds = async () => {
     const response = await fetch('https://api.thedogapi.com/v1/breeds')
@@ -23,9 +22,8 @@ const getDogBreedId = async (breedId) => {
 const createDogData = (dogData) => {
   document.body.lastChild.remove()
   dogImgEl.setAttribute('src', dogData.url);
-  const dogInfo = `${dogData.breeds[''].name} is ${dogData.breeds[''].temperament} and was used for ${dogData.breeds[''].bred_for}`;
-  const dogInfoEl = document.createElement('p');
-  dogInfoEl.textContent = dogInfo;
+  dogInfoEl.setAttribute('text', dogData.temperament);
+  // const dogInfo = `${dogData.breeds[''].name} is ${dogData.breeds[''].temperament} and was used for ${dogData.breeds[''].bred_for}`;
   document.body.appendChild(dogInfoEl);
 }
 
@@ -35,6 +33,7 @@ const getUserBreeds = (breeds) => {
     option.text = breed.name;
     option.value = breed.id;
     select.appendChild(option);
+    return option;
   });
 };
 
