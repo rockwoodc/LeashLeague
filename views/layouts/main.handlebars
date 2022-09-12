@@ -17,7 +17,10 @@
 </head>
 
 <body>
-    <!-- Header Title -->
+
+{{{ body }}}
+
+    {{!-- <!-- Header Title -->
     <header>
         <div id="home" class="columns is-centered">
             <div class="column is-5">
@@ -34,7 +37,6 @@
 
     <!-- Navigation Header Bar -->
     <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
-        {{#if loggedIn}}
         <div class="navbar-brand">
             <a class="navbar-item" href="https://bulma.io">
                 <img src="../public/imgs/logo-words.png" width="200" height="75">
@@ -75,13 +77,12 @@
                         </a>
                     </div>
                 </div>
-                {{else}}
                 <div class="navbar-item">
                     <div class="buttons">
-                        <a href="../login.handlebars" class="button">
+                        <a href="/login" class="button">
                             Login
                         </a>
-                        <a class="button">
+                        <a href="/login" class="button">
                             Logout
                         </a>
                     </div>
@@ -90,7 +91,6 @@
         </div>
         </div>
         </div>
-        {{/if}}
     </nav>
 
     <!-- About Section -->
@@ -211,10 +211,10 @@
                 and Cortland Finch.
             </p>
         </div>
-    </footer>
-
+    </footer> --}}
+{{!-- 
     <!-- Project Javascript File Link -->
-    <script  src="/javascript/api.js"></script>
+    <script  src="/javascript/api.js"></script> --}}
 </body>
 
 </html>
