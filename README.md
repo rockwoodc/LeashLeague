@@ -89,6 +89,7 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 ![Express](http://img.shields.io/badge/-Express-black?style=flat&logo=express&logoColor=white)
 ![Insomnia](https://img.shields.io/badge/-Insomnia-5849BE?style=flat&logo=insomnia&logoColor=white)
 ![VSCode](https://img.shields.io/badge/-VSCode-007ACC?style=flat&logo=visual-studio-code&logoColor=white)
+![Handlebars](https://img.shields.io/badge/-Handlebars-007ACC?style=flat&logo=visual-studio-code&logoColor=white)
 
 
 * ![Handlebars.js](https://img.shields.io/badge/JS-HANDLEBARS-success?style=plastic?logo=data:#000000)
