@@ -92,6 +92,7 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 ![Handlebars](https://img.shields.io/badge/-Handlebars-666666?style=flat&logo=handlebars.js&logoColor=white)
 ![mySQL](https://img.shields.io/badge/-mySQL-4479A1?style=flat&logo=mySQL&logoColor=white)
 ![Handlebars](https://img.shields.io/badge/-Sequelize-52B0E7?style=flat&logo=sequelize&logoColor=white)
+![Bulma](https://img.shields.io/badge/-Bulma-52B0E7?style=flat&logo=bulma.css&logoColor=white)
 
 
 
