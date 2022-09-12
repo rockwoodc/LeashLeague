@@ -1,10 +1,9 @@
-// Async Login Form Function
 async function loginPage() {
     console.log("Hit Login Page!")
     // email link
-    const email = document.getElementById('email-signup').value;
+    const email = document.getElementById('email-signin');
     // password link
-    const password = document.getElementById('password-signup').value;
+    const password = document.getElementById('password-signin');
     console.log(email, password);
 
     if (email && password) {
