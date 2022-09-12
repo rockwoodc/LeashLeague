@@ -22,7 +22,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/github_username/repo_name">
-    <img src="/public/imgs/logo.png" alt="Logo" width="160" height="160">
+    <img src="/public/imgs/logo.png" alt="Logo" width="200" height="200">
   </a>
 
 <h3 align="center">Leash League</h3>
