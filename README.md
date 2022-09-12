@@ -78,12 +78,18 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 
 ### Built With
 
+#### Languages:
+
+![Javascript](https://img.shields.io/badge/-JavaScript-EDD222?style=flat&logo=javascript&logoColor=white)
+![CSS3](https://img.shields.io/badge/-CSS3-1572B6?style=flat&logo=css3)
+![HTML5](https://img.shields.io/badge/-HTML5-E34F26?style=flat&logo=html5&logoColor=white)
+
+#### Frameworks and Applications
 ![NodeJS](http://img.shields.io/badge/-NodeJS-6EBF20?style=flat&logo=node.js&logoColor=white)
 ![Express](http://img.shields.io/badge/-Express-black?style=flat&logo=express&logoColor=white)
 ![Insomnia](https://img.shields.io/badge/-Insomnia-5849BE?style=flat&logo=insomnia&logoColor=white)
 ![VSCode](https://img.shields.io/badge/-VSCode-007ACC?style=flat&logo=visual-studio-code&logoColor=white)
-![CSS3](https://img.shields.io/badge/-CSS3-1572B6?style=flat&logo=css3)
-![HTML5](https://img.shields.io/badge/-HTML5-E34F26?style=flat&logo=html5&logoColor=white)
+
 
 * ![Handlebars.js](https://img.shields.io/badge/JS-HANDLEBARS-success?style=plastic?logo=data:#000000)
 * ![Bulma.css](https://img.shields.io/badge/CSS-BULMA-informational?style=plastic?logo=data:#00D1B2)
