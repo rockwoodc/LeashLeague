@@ -22,7 +22,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/github_username/repo_name">
-    <img src="/public/imgs/logo.png" alt="Logo" width="200" height="200">
+    <img src="public/imgs/logo.png" alt="Logo" width="200" height="200">
   </a>
 
 <h3 align="center">Leash League</h3>
@@ -72,7 +72,7 @@ As devoted dog owners and lovers we wanted to make it simple for you to find you
 
 <div align="center">
   <a href="https://github.com/github_username/repo_name">
-    <img src="/public/imgs/main_page_ss.png" alt="Logo" width="200" height="200">
+    <img src="public/imgs/SS.png" alt="Logo" width="200" height="200">
   </a>
 </div>
 
