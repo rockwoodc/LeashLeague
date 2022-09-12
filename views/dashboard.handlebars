@@ -12,18 +12,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Antic&family=Bubblegum+Sans&display=swap" rel="stylesheet">
     <!-- Project Style Sheet Link -->
-    <link rel="stylesheet" href="../public/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
     <title>Leash League!</title>
 </head>
 
 <body>
+
     <!-- Header Title -->
     <header>
-        <div class="columns is-centered">
+        <div id="home" class="columns is-centered">
             <div class="column is-5">
                 <div class="title-container">
                     <div id="button-main-container" class="buttons">
-                        <a id="button-main" class="button has-text-centered">
+                        <a id="button-main" class="button has-text-centered" href="#dog-filter-section">
                             FIND YOUR PAWFECT FRIEND!
                         </a>
                     </div>
@@ -34,10 +35,9 @@
 
     <!-- Navigation Header Bar -->
     <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
-        {{#if loggedIn}}
         <div class="navbar-brand">
             <a class="navbar-item" href="https://bulma.io">
-                <img src="../imgs/logo-words.png" width="200" height="75">
+                <img src="../public/imgs/logo-words.png" width="200" height="75">
             </a>
 
             <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
@@ -50,13 +50,13 @@
 
         <div id="navbarBasicExample" class="navbar-menu">
             <div class="navbar-end">
-                <a class="navbar-item">
+                <a class="navbar-item" href="#home">
                     Home
                 </a>
-                <a class="navbar-item">
+                <a class="navbar-item" href="#about-section">
                     About
                 </a>
-                <a class="navbar-item">
+                <a class="navbar-item" href="#dog-filter-section">
                     Dogs
                 </a>
 
@@ -66,22 +66,21 @@
                     </a>
 
                     <div class="navbar-dropdown">
-                        <a class="navbar-item">
+                        <a class="navbar-item" href="#adoption-section">
                             Kennels
                         </a>
                         <hr class="navbar-divider">
-                        <a class="navbar-item">
+                        <a class="navbar-item" href="#contact-section">
                             Contact
                         </a>
                     </div>
                 </div>
-                {{else}}
                 <div class="navbar-item">
                     <div class="buttons">
-                        <a href="../login.handlebars" class="button">
+                        <a href="/login" class="button">
                             Login
                         </a>
-                        <a class="button">
+                        <a href="/login" class="button">
                             Logout
                         </a>
                     </div>
@@ -90,30 +89,27 @@
         </div>
         </div>
         </div>
-        {{/if}}
     </nav>
-    
-{{{ body }}}
 
-    {{!-- <!-- About Section -->
+    <!-- About Section -->
     <section id="about-section" class="section is-medium">
-        <h1 class="title has-text-centered">About Pupaholics</h1>
+        <h1 class="title has-text-centered">About Leash League</h1>
         <div class="columns">
             <div id="about-info-container" class="column">
                 <h2 class="subtitle">
                     As devoted dog owners and lovers we wanted to make it simple for you to find your new fury
-                    bestfriend. As we
+                    best friend from a shelter in the Greater Richmond area. As we
                     all know dogs can come in all shapes and sizes with different tempermeants and physical activity
-                    needs. This
-                    often makes it difficult for new potential dog owners to choose which breed they want or can have
-                    depending
-                    on their situation at home. <br> We have created what we beleive is a great starting point in
+                    needs. When trying to find your new best friend at a shelter, you may come across breeds you have not heard of before. Our website makes it easy for you to find a shelter, review the current dog breeds up for adoption, and research the breed to find out more. Our goal is to redue the number of people shopping for dogs, increase the number of people adopting, and ensure your new pooch has a forever home with you! Researching breeds is the first step in insuring that you find the best dog to fit your life style.
+                    <br>
+                    <br> 
+                    We have created what we beleive is a great starting point in
                     choosing your
-                    new companion.
+                    new best friend.
                 </h2>
             </div>
             <div id="about-info-img" class="column">
-                <img src="../imgs/bone.png" alt="img of dog with bone">
+                <img src="../public/imgs/bone.png" alt="img of dog with bone">
             </div>
         </div>
     </section>
@@ -121,40 +117,19 @@
     <!-- Dog Filter Choices Section -->
     <section id="dog-filter-section" class="section is-medium">
         <h1 class="title has-text-centered">Find Your Breed!</h1>
-        <div class="columns is-centered">
-            <div class="column">
-                <div class="dropdown is-active">
-                    <div class="dropdown-trigger">
-                        <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
-                            <span>Dropdown button</span>
-                            <span class="icon is-small">
-                                <i class="fas fa-angle-down" aria-hidden="true"></i>
-                            </span>
-                        </button>
-                    </div>
-                    <div class="dropdown-menu" id="dropdown-menu" role="menu">
-                        <div class="dropdown-content">
-                            <a href="#" class="dropdown-item">
-                                Dropdown item
-                            </a>
-                            <a class="dropdown-item">
-                                Other dropdown item
-                            </a>
-                            <a href="#" class="dropdown-item is-active">
-                                Active dropdown item
-                            </a>
-                            <a href="#" class="dropdown-item">
-                                Other dropdown item
-                            </a>
-                            <hr class="dropdown-divider">
-                            <a href="#" class="dropdown-item">
-                                With a divider
-                            </a>
-                        </div>
-                    </div>
+            <div class="columns is-centered">
+                <div class="column has-text-centered">
+                    <select class="breed-choice">
+                        <option>SELECT YOUR BREED</option>
+                      </select>
                 </div>
             </div>
-        </div>
+            <div class="columns is-centered">
+                <div class="column has-text-centered">
+                    <img class="dog-img" src="../public/imgs/Best friend loading... (1).png" alt="Best friend loading image" />
+                    <p class="dog-info"></p>
+                </div>
+            </div>
     </section>
 
     <!-- ADOPTION CENTER Section -->
@@ -162,24 +137,56 @@
         <h1 class="title has-text-centered">Find AN ADOPTION CENTER Near You!</h1>
         <div class="columns">
             <div class="column adopt-card has-text-centered">
-                <h2>Richmond SPCA</h2>
+                <h2 class="title is-3">Richmond SPCA</h2>
+                <img class="adoption-img" src="../public/imgs/richmond-spca-logo.jpeg" alt="image of SPCA Logo">
+                <h3 class="title is-5">Contact</h3>
+                <p><b>Phone:</b> 804-521-1300</p>
+                <p><b>Email:</b> info@richmondspca.org</p>
+                <p><a href="https://richmondspca.org/" target="_blank">SPCA Website</a></p>
             </div>
             <div class="column adopt-card has-text-centered">
-                <h2>Richmond Animal League</h2>
+                <h2 class="title is-3">Richmond Animal League</h2>
+                <img class="adoption-img" src="../public/imgs/RAL.png" alt="image of RAL Logo">
+                <h3 class="title is-5">Contact</h3>
+                <p><b>Phone:</b> 804-379-0046</p>
+                <p><b>Email:</b> Adopt@ral.org</p>
+                <p><a href="https://www.ral.org/" target="_blank">RAL Website</a></p>
             </div>
             <div class="column adopt-card has-text-centered">
-                <h2>Richmond Ruff House</h2>
+                <h2 class="title is-3">RACC</h2>
+                <img class="adoption-img-racc" src="../public/imgs/RACC.png" alt="image of RACC Logo">
+                <h3 class="title is-5">Contact</h3>
+                <p><b>Phone:</b> 804-646-5573</p>
+                <p><b>Email:</b> savinglives@raccfoundation.org</p>
+                <p><a href="https://www.raccfoundation.org/" target="_blank">RACC Website</a></p>
             </div>
         </div>
+
         <div class="columns">
             <div class="column adopt-card has-text-centered">
-                <h2>Friends United with the Richmond Shelter</h2>
+                <h2 class="title is-3">Friends United with the Richmond</h2>
+                <img class="adoption-img" src="../public/imgs/furs.png" alt="image of  Logo">
+                <h3 class="title is-5">Contact</h3>
+                <p><b>Phone:</b> 804-364-1944 </p>
+                <p><b>Email:</b> info@fursdogs.com </p>
+                <p><a href="https://www.fursdogs.com/" target="_blank">FURS Website</a></p>
             </div>
+
             <div class="column adopt-card has-text-centered">
-                <h2>Operation Paws For Homes</h2>
+                <h2 class="title is-3">Operation Paws For Homes</h2>
+                <img class="adoption-img-sm" src="../public/imgs/OPWHtransparent.png" alt="image of  Logo">
+                <h3 class="title is-5">Contact</h3>
+                <p><b>Phone:</b> 703-344-7320</p>
+                <p><b>Email:</b> adpot@ophrescue.org</p>
+                <p><a href="https://ophrescue.org/" target="_blank">Operation Paws Website</a></p>
             </div>
+
             <div class="column adopt-card has-text-centered">
-                <h2>St. Francis Humane Association</h2>
+                <h2 class="title is-3">FLOP RVA</h2>
+                <img class="adoption-img-sm" src="../public/imgs/FLOP.png" alt="image of  Logo">
+                <h3 class="title is-5">Contact</h3>
+                <p><b>Email:</b> floprva@gmail.com</p>
+                <p><a href="https://www.floprva.org/" target="_blank">FLOP Website</a></p>
             </div>
         </div>
     </section>
@@ -188,25 +195,24 @@
     <section id="contact-section" class="section is-medium">
         <h1 class="title has-text-centered">Contact Us!</h1>
         <h2 class="subtitle">
-            A simple container to divide your page into <strong>sections</strong>, like the one you're currently
-            reading.
+            Email: leashleague@gmail.com
+            <br>
+            Phone: (804)555-5555
         </h2>
     </section>
-
 
     <!-- Footer Section -->
     <footer class="footer">
         <div class="content has-text-centered">
             <p>
                 <a href=""><strong>Leash League</strong></a> by Christian Rockwood, James Fraser, Christopher Campaigne,
-                Cortland Finch, and Simiaun.
+                and Cortland Finch.
             </p>
         </div>
-    </footer> --}}
+    </footer>
 
     <!-- Project Javascript File Link -->
-    <script defer src="../scripts/script.js"></script>
-
+    <script  src="/javascript/api.js"></script>
 </body>
 
 </html>

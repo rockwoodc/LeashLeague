@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { User } = require('../../models');
+const withAuth = require('../../utils/auth');
 
 // GET Users
 router.get('/', (req, res) => {
@@ -57,11 +58,11 @@ router.post('/', (req, res) => {
 });
 
 // Verify User Login with their Email and Password
-router.post('/login', (req, res) => {
+router.post('/login', withAuth, (req, res) => {
     // Need a Valid Email with a Password longer than 8 characters
-    User.findOne({
+    User.findAll({
         where: {
-            email: req.body.email
+            email: req.session.email
         }
     })
         .then(dbUserTable => {
@@ -78,10 +79,12 @@ router.post('/login', (req, res) => {
             req.session.save(() => {
                 req.session.UserID = dbUserTable.id;
                 req.session.username = dbUserTable.username;
+                req.session.email = dbUserTable.email;
                 req.session.LOGIN = true;
                 res.json({ user: dbUserTable, message: 'You have successfully logged in!' });
-            });
+            })
         });
+        res.render('dashboard');
 });
 
 // Log User Out (204 Status Message is a positive request status but requires no navigation away from the current page)
