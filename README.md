@@ -90,6 +90,9 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 ![Insomnia](https://img.shields.io/badge/-Insomnia-5849BE?style=flat&logo=insomnia&logoColor=white)
 ![VSCode](https://img.shields.io/badge/-VSCode-007ACC?style=flat&logo=visual-studio-code&logoColor=white)
 ![Handlebars](https://img.shields.io/badge/-Handlebars-666666?style=flat&logo=handlebars.js&logoColor=white)
+![mySQL](https://img.shields.io/badge/-mySQL-666666?style=flat&logo=mySQL&logoColor=white)
+![Handlebars](https://img.shields.io/badge/-Sequelize-666666?style=flat&logo=sequelize&logoColor=white)
+
 
 
 * ![Handlebars.js](https://img.shields.io/badge/JS-HANDLEBARS-success?style=plastic?logo=data:#000000)
