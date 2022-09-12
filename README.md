@@ -94,7 +94,7 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 ![Handlebars](https://img.shields.io/badge/-Sequelize-52B0E7?style=flat&logo=sequelize&logoColor=white)
 ![Bulma](https://img.shields.io/badge/-Bulma-00D1B2?style=flat&logo=bulma.io&logoColor=white)
 
-
+<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Bulma</title><path d="M11.25 0l-6 6 -1.5 10.5 7.5 7.5 9 -6 -6 -6 4.5 -4.5 -7.5 -7.5Z"/></svg>
 
 * ![Handlebars.js](https://img.shields.io/badge/JS-HANDLEBARS-success?style=plastic?logo=data:#000000)
 * ![Bulma.css](https://img.shields.io/badge/CSS-BULMA-informational?style=plastic?logo=data:#00D1B2)
