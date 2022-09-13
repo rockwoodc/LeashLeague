@@ -72,7 +72,7 @@ As devoted dog owners and lovers we wanted to make it simple for you to find you
 
 <div align="center">
   <a href="https://github.com/github_username/repo_name">
-    <img src="public/imgs/SS.png" alt="Logo" width="200" height="200">
+    <img src="public/imgs/SS.png" alt="Logo">
   </a>
 </div>
 
